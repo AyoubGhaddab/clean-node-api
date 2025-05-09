@@ -1,4 +1,3 @@
 {
-  "github.copilot.enable": false,
-  "standard.autoFixOnSave": true
+  "github.copilot.enable": false
 }
