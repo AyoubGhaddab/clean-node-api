@@ -6,6 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "standard"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AyoubGhaddab/clean-node-api.git"
@@ -17,6 +27,8 @@
   },
   "homepage": "https://github.com/AyoubGhaddab/clean-node-api#readme",
   "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.2",
     "standard": "^17.1.2"
   }
 }
