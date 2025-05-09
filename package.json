@@ -7,11 +7,6 @@
     "test": "jest",
     "prepare": "husky"
   },
-  "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "standard"
-    ]
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/AyoubGhaddab/clean-node-api.git"
