@@ -4,11 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest  --silent --verbose --noStackTrace --passWithNoTests", 
+    "test": "jest  --silent --verbose --noStackTrace --passWithNoTests",
     "test:unit": "npm test -- --watchAll -c jest-unit-config.js",
-    "test:integration": "npm test -- --watchAll -c jest-integration-config.js", 
-    "test:staged":"npm test -- --findRelatedTests",
-    "test:ci":"npm test -- --coverage",
+    "test:integration": "npm test -- --watchAll -c jest-integration-config.js",
+    "test:staged": "npm test -- --findRelatedTests",
+    "test:ci": "npm test -- --coverage",
     "prepare": "husky"
   },
   "repository": {
@@ -16,7 +16,9 @@
     "url": "git+https://github.com/AyoubGhaddab/clean-node-api.git"
   },
   "standard": {
-    "env": ["jest"]
+    "env": [
+      "jest"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -32,6 +34,7 @@
   },
   "dependencies": {
     "express": "^5.1.0",
-    "mongoose": "^8.14.2"
+    "mongoose": "^8.14.2",
+    "validator": "^13.15.0"
   }
 }
