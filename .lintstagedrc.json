@@ -1,7 +1,7 @@
 {
   "*.{js,jsx,ts,tsx}": [
     "standard --fix",
-    "npm run test:staged",
+    "jest --findRelatedTests --passWithNoTests",
     "git add"
   ]
 }
