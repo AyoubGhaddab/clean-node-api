@@ -1,7 +1,5 @@
 {
   "*.{js,jsx,ts,tsx}": [
     "standard --fix",
-    "jest --findRelatedTests --passWithNoTests",
-    "git add"
-  ]
+    "jest --findRelatedTests --passWithNoTests"  ]
 }
