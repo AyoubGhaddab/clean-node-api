@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --watchAll",
-    "test:staged":"jest --findRelatedTests --passWithNoTests",
+    "test": "jest --watchAll --silent --verbose" ,
+    "test:staged":"jest --findRelatedTests --passWithNoTests --silent",
     "prepare": "husky"
   },
   "repository": {
