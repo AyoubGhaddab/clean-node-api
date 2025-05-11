@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --watchAll --silent --verbose" ,
-    "test:staged":"jest --findRelatedTests --passWithNoTests --silent",
+    "test:staged":"jest --findRelatedTests --passWithNoTests",
     "test:ci":"jest --passWithNoTests --coverage",
     "prepare": "husky"
   },
