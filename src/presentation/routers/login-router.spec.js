@@ -133,5 +133,18 @@ describe('Login Router', () => {
     expect(httpResponse.statusCode).toBe(500)
     expect(httpResponse.body).toEqual(new ServerError())
   })
+
+  /* test('Should return 400 if an invlaid email is provided', async () => {
+    const { sut } = makeSut()
+    const httpRequest = {
+      body: {
+        email: 'invalid_email',
+        password: 'any_password'
+      }
+    }
+    const httpResponse = await sut.route(httpRequest)
+    expect(httpResponse.statusCode).toBe(401)
+    expect(httpResponse.body).toEqual(new InvalidParamError('email'))
+  }) */
 }
 )
