@@ -1,4 +1,6 @@
 {
   "github.copilot.enable": false,
-  "standard.autoFixOnSave": true
+  "standard.autoFixOnSave": true,
+  "explorer.compactFolders": false
+
 }

@@ -19,7 +19,7 @@ class ExpressRouterAdapter {
   }
 }
 
-// 2. Route Layer (Controller)
+// 2. Route Layer (Controller) PRESENTATION LAYER
 class SignUpRouter {
   async route (httpRequest) {
     const { email, password, repeatPassword } = httpRequest.body
@@ -30,7 +30,8 @@ class SignUpRouter {
     }
   }
 }
-// 3. Use Case Layer (Application Logic)
+// 3. Use Case Layer (Application Logic) // DOMAIN LAYER
+// This is where the business logic goes
 class SignUpUseCase {
   async SignUp (email, password, repeatPassword) {
     if (password === repeatPassword) {
@@ -39,6 +40,7 @@ class SignUpUseCase {
   }
 }
 // 4. Infrastructure Layer (Database)
+// This is where the database logic goes
 const mongoose = require('mongoose')
 const AccountModel = mongoose.model('Account')
 
