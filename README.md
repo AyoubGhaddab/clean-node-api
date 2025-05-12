@@ -40,3 +40,12 @@ Handles the logic for authenticating a user:
 - Node.js ≥ 14
 - NPM or Yarn
 
+### Installation
+
+```bash
+git clone https://github.com/AyoubGhaddab/clean-node-api.git
+cd clean-node-api
+npm install
+
+🧑‍💻 Author
+Created as part of a learning path on TDD + Clean Architecture.
