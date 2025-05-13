@@ -23,7 +23,6 @@ describe('LoadUserByEmailRepository', () => {
   })
   test('Should return null if no user is found', async () => {
     const { sut } = makeSut()
-
     const user = await sut.load('invalid_email@mail.com')
     expect(user).toBeNull()
   })
@@ -40,5 +39,10 @@ describe('LoadUserByEmailRepository', () => {
     const expectedUser = await userModel.findOne({ _id: insertedId })
     const user = await sut.load('valid_email@mail.com')
     expect(user).toEqual(expectedUser)
+  })
+  test('Should throw if no userModel is provided', async () => {
+    const sut = new LoadUserByEmailRepository()
+    const promise = sut.load('invalid_email@mail.com')
+    expect(promise).rejects.toThrow()
   })
 })
