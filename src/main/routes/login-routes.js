@@ -1,8 +1,6 @@
-module.exports = router => {
-  router.get('/health', (req, res) => {
-    res.status(200).json({ status: 'ok' })
-  })
-  router.post('/login', (req, res) => {
-    res.status(200).json({ status: 'ok' })
-  })
+const { adapt } = require('../adapters/express-router-adapter')
+
+const LoginRouterComposer = require('../composers/login-router-composer')
+module.exports = async router => {
+  router.post('/login', adapt(LoginRouterComposer.compose()))
 }

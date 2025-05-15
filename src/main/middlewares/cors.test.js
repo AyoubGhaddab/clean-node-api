@@ -1,7 +1,10 @@
 const request = require('supertest')
-const app = require('../config/app')
-
+let app
 describe('CORS Middleware', () => {
+  beforeEach(() => {
+    jest.resetModules()
+    app = require('../config/app')
+  })
   test('Should enable CORS', async () => {
     app.get('/test_cors', (req, res) => {
       res.send('')
