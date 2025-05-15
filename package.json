@@ -4,10 +4,10 @@
   "description": "",
   "main": "src/main/index.js",
   "scripts": {
-    "start":"node src/main/index.js",
+    "start": "node src/main/index.js",
     "test": "jest --colors --noStackTrace --passWithNoTests",
     "test:unit": "npm test -- -c jest-unit-config.js",
-    "test:integration": "npm test -- --watchAll -c jest-integration-config.js",
+    "test:integration": "npm test -- -c jest-integration-config.js",
     "test:staged": "npm test -- --findRelatedTests --silent",
     "test:ci": "npm test -- --coverage --silent",
     "prepare": "husky"
@@ -32,7 +32,8 @@
     "husky": "^9.1.7",
     "jest": "^29.7.0",
     "lint-staged": "^15.5.2",
-    "standard": "^17.1.2"
+    "standard": "^17.1.2",
+    "supertest": "^7.1.1"
   },
   "dependencies": {
     "bcrypt": "^6.0.0",
