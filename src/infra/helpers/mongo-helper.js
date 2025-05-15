@@ -12,10 +12,10 @@ module.exports = {
     this.client = null
     this.db = null
   },
-  async getDb () {
+  async getCollection (name) {
     if (!this.client || !this.client.topology || !this.client.topology.isConnected()) {
       await this.connect(this.uri, this.dbName)
     }
-    return this.db
+    return this.db.collection(name)
   }
 }
